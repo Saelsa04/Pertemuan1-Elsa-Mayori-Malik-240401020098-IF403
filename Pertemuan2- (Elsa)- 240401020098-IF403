@@ -1,0 +1,42 @@
+# Pertemuan2-Elsa-Mayori-Malik-240401020098-IF403
+Pertemuan2 [Elsa Mayori Malik] | 240401020098 | IF403
+
+# Tugas Praktikum Pengantar Data Science
+### Repository Portofolio Data Science
+
+* **Nama Lengkap:** Elsa Mayori Malik
+* **NIM:** 240401020098
+* **Kelas:** IF403
+* **Pertemuan:** 2 (Eksplorasi Data, NumPy, & Manipulasi Dasar Pandas)
+
+---
+
+### 1. Peran Library Kombinasi: NumPy & Pandas
+Dalam ekosistem Data Science Python, data mentah jarang sekali bisa langsung dianalisis tanpa alat bantu. Kita menggunakan dua library fundamental:
+* **NumPy (Numerical Python)**: Menyediakan objek `ndarray` (N-dimensional array). Keunggulannya adalah kecepatan komputasi karena array NumPy dialokasikan pada blok memori yang berdekatan (*contiguous memory*) dan mendukung operasi *vectorization* (memproses seluruh data tanpa loop manual).
+* **Pandas**: Dibangun di atas NumPy, library ini menyediakan struktur data tingkat tinggi yang fleksibel untuk memanipulasi data tabular (seperti tabel SQL atau spreadsheet Excel).
+
+### 2. Anatomi Struktur Data Pandas
+Pandas memiliki dua struktur data utama yang wajib dikuasai:
+1. **Series**: Array satu dimensi yang berlabel. Setiap elemen memiliki indeks (*index*) yang bisa berupa angka maupun label teks.
+2. **DataFrame**: Struktur data dua dimensi (tabular). Memiliki baris (*rows*) dan kolom (*columns*). Anda bisa membayangkannya sebagai kumpulan dari beberapa Series yang berbagi indeks yang sama.
+
+### 3. Esensi Eksplorasi Data (Exploratory Data Analysis - EDA)
+EDA adalah tahapan kritis setelah pengumpulan data untuk memahami karakteristik dataset sebelum melakukan pemodelan. Komponen EDA dasar meliputi:
+* **Dimensi Data**: Menggunakan `.shape` untuk melihat volume baris dan fitur (kolom).
+* **Inspeksi Skema**: Menggunakan `.info()` untuk memvalidasi tipe data (apakah string dibaca sebagai `object`, angka sebagai `int64`/`float64`).
+* **Statistik Deskriptif**: Menggunakan `.describe()` untuk mengukur tendensi sentral (mean, median) dan dispersi data (standar deviasi, kuartil).
+
+### 4. Penanganan Data Hilang (Handling Missing Values)
+Di dunia nyata, data seringkali kotor atau tidak lengkap akibat kegagalan sistem atau kelalaian manusia. Pandas melabeli data hilang dengan `NaN` (*Not a Number*). Strategi penanganannya meliputi:
+* **Imputasi**: Mengisi nilai kosong dengan nilai pengganti yang logis, seperti nilai rata-rata (*mean*) untuk distribusi normal, atau median untuk data yang memiliki pencilan (*outliers*).
+* **Dropping**: Menghapus baris atau kolom jika jumlah data yang hilang terlalu masif (misal >50%) sehingga tidak merusak bias model.
+
+
+##Kesimpulan Praktikum Pertemuan 2
+
+Berdasarkan hasil eksperimen eksekusi kode program dan analisis data dasar menggunakan library NumPy dan Pandas, dapat disimpulkan beberapa poin penting sebagai berikut:
+
+1. **Efisiensi NumPy & Pandas**: Manipulasi data tabular berukuran besar menjadi jauh lebih efisien, cepat, dan terstruktur menggunakan `pd.DataFrame` dibandingkan jika kita menggunakan struktur data bawaan Python biasa seperti bersarangnya *List dalam List* atau *Dictionary dalam Dictionary*.
+2. **Pentingnya Penanganan Data Hilang (Data Cleaning)**: Adanya data kosong (`NaN`) pada kolom `Nilai_Ujian` dapat merusak performa model komputasi dan analisis statistik ke depannya jika diabaikan. Teknik imputasi menggunakan nilai rata-rata (*mean*) dengan fungsi `.fillna()` terbukti menjadi solusi efektif untuk menjaga integritas data tanpa harus mengorbankan atau menghapus baris mahasiswa yang bersangkutan (seperti data milik Siti dan Rian).
+3. **Kekuatan Fitur Pemfilteran (Data Masking)**: Pandas memberikan fleksibilitas tinggi dalam melakukan ekstraksi informasi spesifik. Melalui operasi logika boolean `&`, kita dapat menyaring kelompok data yang memenuhi kriteria kompleks secara instan—misalnya mencari mahasiswa prodi Informatika yang memiliki performa akademik unggul (IPK > 3.50)—yang mana sangat krusial dalam mendukung proses pengambilan keputusan berbasis data (*Data-Driven Decision Making*).
