@@ -1,0 +1,41 @@
+# Pertemuan5-Elsa-Mayori-Malik-240401020098-IF403
+Pertemuan5 [Elsa Mayori Malik] | 240401020098 | IF403
+
+# Tugas Praktikum Pengantar Data Science
+### Repository Portofolio Data Science
+
+* **Nama Lengkap:** Elsa Mayori Malik
+* **NIM:** 240401020098
+* **Kelas:** IF403
+* **Pertemuan:** 5 (Visualisasi Data & Penyampaian Cerita Berbasis Data)
+
+---
+
+##Ringkasan Teori & Konsep Akademis
+
+### 1. Filosofi Visualisasi Data
+Visualisasi data bukan sekadar membuat grafik yang indah, melainkan seni dan sains untuk mengubah data mentah menjadi wawasan (*insights*) yang dapat ditindaklanjuti. Visualisasi bertindak sebagai jembatan komunikasi antara analisis teknis Data Scientist dengan pembuat keputusan bisnis (*stakeholders*).
+
+### 2. Lima Prinsip Visualisasi Data yang Efektif
+Berdasarkan pendekatan akademis (Cole Nussbaumer Knaflic & Edward Tufte), visualisasi yang efektif harus memenuhi 5 prinsip utama:
+1. **Kejelasan (Clarity)**: Grafik harus mudah dipahami secara instan tanpa menimbulkan ambiguitas bagi pembaca.
+2. **Akurasi (Accuracy)**: Data harus ditampilkan secara jujur tanpa distorsi visual (misalnya, sumbu Y pada diagram batang harus dimulai dari angka 0 agar tidak memanipulasi persepsi skala).
+3. **Efisiensi (Efficiency)**: Memaksimalkan *data-ink ratio*, yaitu membuang elemen visual yang tidak penting (seperti garis kisi berlebih atau hiasan 3D) agar audiens fokus pada data inti.
+4. **Estetika (Aesthetics)**: Pemilihan palet warna yang harmonis dan tipografi yang bersih untuk meningkatkan kenyamanan audiens saat membaca grafik.
+5. **Konteks (Context)**: Menyediakan label, legenda, judul, dan anotasi penjelas yang memandu pembaca memahami latar belakang data tersebut.
+
+### 3. Kerangka Analisis Visual: What? So What? Now What?
+Untuk menghasilkan penyampaian cerita berbasis data (*Data Storytelling*) yang kuat, kita menggunakan metode tiga tahap:
+* **What?** (Apa): Menunjukkan fakta dasar atau fenomena apa yang sedang terjadi di dalam data (komponen deskriptif).
+* **So What?** (Lalu Kenapa): Menjelaskan dampak atau signifikansi dari fenomena tersebut terhadap organisasi atau bisnis (komponen interpretatif).
+* **Now What?** (Sekarang Bagaimana): Memberikan rekomendasi strategis atau tindakan nyata yang harus diambil berdasarkan temuan data tersebut (komponen aksi).
+
+---
+
+## Kesimpulan Praktikum Pertemuan 5
+
+Berdasarkan hasil eksplorasi mendalam terhadap teknik visualisasi menggunakan ekosistem Python, diperoleh beberapa konklusi penting:
+
+1. **Visualisasi Sebagai Alat Diagnostik Utama**: Grafik seperti *Boxplot* dan *Histogram* terbukti sangat esensial untuk memahami sebaran variabel tunggal secara intuitif sebelum data digunakan untuk pemodelan prediktif.
+2. **Kekuatan Data Storytelling**: Melalui penerapan metode *What?, So What?, Now What?*, penyajian grafik tidak lagi sekadar memamerkan angka, melainkan mampu menyampaikan narasi analitis yang memiliki nilai bisnis tinggi untuk memandu langkah strategis manajemen.
+3. **Pentingnya Ketepatan Pemilihan Grafik**: Setiap tipe dataset memerlukan representasi visual yang spesifik. Penggunaan *Scatter Plot* sangat tepat untuk memetakan korelasi antar fitur numerik kontinu, sementara *Bar Chart* menjadi pilihan mutlak dalam menyajikan perbandingan data kategorikal secara kontras dan akurat.
