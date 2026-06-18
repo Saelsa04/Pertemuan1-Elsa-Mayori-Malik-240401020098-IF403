@@ -1,0 +1,53 @@
+# Pertemuan7-Elsa-Mayori-Malik-240401020098-IF403
+Pertemuan7 [Elsa Mayori Malik] | 240401020098 | IF403
+
+# Tugas Praktikum Pengantar Data Science
+### Repository Portofolio Data Science
+
+* **Nama Lengkap:** Elsa Mayori Malik
+* **NIM:** 240401020098
+* **Kelas:** IF403
+* **Pertemuan:** 7 (Pengantar Machine Learning: Regresi Linear)
+
+---
+
+## Ringkasan Teori & Konsep Akademis
+
+### 1. Hakikat Machine Learning & Pembelajaran Terbimbing (Supervised Learning)
+Machine Learning (ML) adalah cabang kecerdasan buatan (AI) yang berfokus pada pengembangan sistem yang mampu belajar dari data secara mandiri tanpa diprogram secara eksplisit (Mitchell, 1997). Regresi Linear termasuk ke dalam kategori **Supervised Learning**, di mana model dilatih menggunakan dataset yang sudah memiliki pasangan input-target (label/ground truth) untuk memprediksi nilai kontinu (numerik).
+
+### 2. Formulasi Matematika Regresi Linear Sederhana
+Regresi Linear bertujuan menemukan garis lurus terbaik (*line of best fit*) yang meminimalkan jarak antara titik data aktual dengan garis prediksi. Secara matematis didefinisikan sebagai:
+$$\hat{y} = \beta_0 + \beta_1x$$
+
+Dimana:
+* $\hat{y}$: Nilai prediksi (variabel dependen/target)
+* $x$: Variabel independen (fitur/prediktor)
+* $\beta_0$: Intersep (titik potong pada sumbu Y ketika $x=0$)
+* $\beta_1$: Koefisien/Kemiringan (*slope*), mengukur sensitivitas perubahan $y$ terhadap $x$.
+
+### 3. Fungsi Kerugian (Loss Function): Mean Squared Error (MSE)
+Untuk melatih model, algoritma harus mengukur seberapa buruk prediksinya melalui Fungsi Kerugian. Regresi Linear menggunakan **MSE (Mean Squared Error)** yang mengkuadratkan selisih antara nilai aktual ($y$) dan prediksi ($\hat{y}$):
+$$MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
+Tujuan utama proses optimasi (seperti *Ordinary Least Squares*) adalah meminimalkan nilai MSE ini mendekati angka 0.
+
+### 4. Metrik Evaluasi Performa Regresi
+Setelah model dilatih, performanya divalidasi menggunakan data uji (*Test Set*) lewat metrik statistik:
+* **MAE (Mean Absolute Error)**: Rata-rata absolut dari kesalahan prediksi. Lebih intuitif dan tidak terlalu sensitif terhadap pencilan (*outliers*).
+* **RMSE (Root Mean Squared Error)**: Akar kuadrat dari MSE. Memberikan penalti besar pada error yang bernilai besar karena proses pengkuadratan awal.
+* **$R^2$ Score (Koefisien Determinasi)**: Mengukur seberapa baik variabilitas target mampu dijelaskan oleh fitur kontrol di dalam model (skala 0 hingga 1). Nilai $R^2 = 0.85$ berarti 85% variasi target berhasil diprediksi dengan benar oleh model.
+
+### 5. Analisis Sisaan (Residual Plot)
+Residual ($\epsilon$) adalah selisih antara data aktual dan hasil prediksi ($\epsilon = y - \hat{y}$). *Residual Plot* adalah alat diagnostik krusial untuk menguji validitas model:
+* **Kondisi Ideal (Valid)**: Titik-titik sisaan tersebar secara acak dan homoskedastis di sekitar garis horizontal $y=0$.
+* **Pelanggaran Asumsi (Invalide)**: Jika sisaan membentuk pola tertentu (seperti kurva parabola atau bentuk corong/heteroskedastisitas), hal ini menandakan hubungan data bersifat non-linear dan regresi linear biasa kurang tepat digunakan.
+
+---
+
+## Kesimpulan Praktikum Pertemuan 7
+
+Berdasarkan implementasi pipa Machine Learning (*Machine Learning Pipeline*) Regresi Linear menggunakan dataset Tips, diperoleh beberapa konklusi penting:
+
+1. **Eksistensi Hubungan Linear**: Hasil latihan model membuktikan adanya hubungan linear positif yang kuat antara total tagihan (`total_bill`) dengan jumlah tip yang diberikan konsumen (`tip`). Nilai koefisien kemiringan ($\beta_1$) yang bernilai positif menegaskan hal tersebut.
+2. **Validitas Akurasi Model**: Berdasarkan metrik evaluasi yang dihitung pada data uji murni (*Test Set*), nilai $R^2$ score yang didapatkan menunjukkan seberapa andal model dalam menjelaskan variasi data tip baru. Nilai RMSE yang kecil menunjukkan tingkat penyimpangan prediksi yang sangat rendah dan tepercaya.
+3. **Konfirmasi Kelayakan via Residuals**: Melalui visualisasi *Residual Plot*, sebaran titik error yang acak dan tidak membentuk pola geometris mengonfirmasi bahwa asumsi linearitas terpenuhi dengan sempurna. Model Regresi Linear ini sah secara statistik untuk digunakan sebagai alat prediksi di lingkungan produksi nyata.
