@@ -1,0 +1,48 @@
+# Pertemuan4-Elsa-Mayori-Malik-240401020098-IF403
+Pertemuan4 [Elsa Mayori Malik] | 240401020098 | IF403
+
+# Tugas Praktikum Pengantar Data Science
+### Repository Portofolio Data Science
+
+* **Nama Lengkap:** Elsa Mayori Malik
+* **NIM:** 240401020098
+* **Kelas:** IF403
+* **Pertemuan:** 4 (Statistika Dasar & Analisis Data)
+
+---
+
+##Ringkasan Teori & Konsep Akademis
+
+### 1. Statistika Deskriptif dalam Data Science
+Statistika deskriptif digunakan untuk merangkum, mendeskripsikan, dan menampilkan ciri-ciri utama dari kumpulan data yang ada sebagai langkah eksplorasi awal wajib (Exploratory Data Analysis).
+
+#### A. Ukuran Pemusatan Data (Central Tendency)
+* **Mean (Rata-rata)**: Jumlah seluruh nilai dibagi banyaknya data. Bersifat sangat sensitif terhadap nilai ekstrem (*outlier*).
+* **Median (Nilai Tengah)**: Nilai tengah dari data yang telah diurutkan. Jauh lebih kebal (*robust*) terhadap outlier dibandingkan mean.
+* **Modus**: Nilai yang paling sering muncul di dalam data, baik numerik maupun kategorik.
+
+#### B. Ukuran Penyebaran Data (Dispersion)
+* **Varians & Standar Deviasi**: Mengukur rata-rata kuadrat selisih data terhadap mean. Standar deviasi memiliki satuan yang sama dengan data asli sehingga lebih mudah diinterpretasikan.
+* **Kuartil & IQR (Interquartile Range)**: Membagi data terurut menjadi 4 bagian sama besar. Rentang Interkuartil ($IQR = Q3 - Q1$) merupakan ukuran penyebaran data yang robust terhadap outlier. Aturan *IQR Fence* menentukan bahwa data di luar rentang $[Q1 - 1.5 \times IQR, Q3 + 1.5 \times IQR]$ dikategorikan sebagai pencilan potensial.
+
+### 2. Distribusi Data, Skewness, & Kurtosis
+Memahami sebaran data sangat krusial karena menentukan asumsi uji statistik yang tepat.
+* **Distribusi Normal**: Distribusi simetris sempurna di mana posisi $Mean = Median = Modus$ berbentuk kurva lonceng.
+* **Skewness (Ukuran Asimetri)**: Mengukur kemiringan distribusi data. Nilai positif ($>0$) mengindikasikan miring kanan (*right-skewed* atau ekor panjang di kanan). Nilai negatif ($<0$) mengindikasikan miring kiri (*left-skewed*).
+* **Kurtosis (Ukuran Ketebalan Ekor)**: Mengukur keruncingan grafik. *Leptokurtic* ($>0$) berarti memiliki puncak runcing dan ekor tebal (banyak outlier), sedangkan *Platykurtic* ($<0$) memiliki puncak yang cenderung datar.
+
+### 3. Analisis Univariat vs Analisis Bivariat
+* **Analisis Univariat**: Mempelajari karakteristik satu variabel tunggal secara independen menggunakan grafik seperti *Histogram*, *KDE Plot*, *Boxplot*, dan *Violin Plot*.
+* **Analisis Bivariat**: Mempelajari hubungan asosiasi antara dua variabel secara bersamaan menggunakan *Scatter Plot*. Hubungan ini diukur secara kuantitatif menggunakan:
+  * **Korelasi Pearson ($r$)**: Mengukur kekuatan hubungan linear untuk data berdistribusi normal.
+  * **Korelasi Spearman ($\rho$)**: Alternatif non-parametrik menggunakan peringkat (*rank*) data, sangat tahan terhadap outlier dan hubungan non-linear monotonik.
+
+---
+
+##Kesimpulan Praktikum Pertemuan 4
+
+Berdasarkan hasil analisis statistik deskriptif dan eksplorasi visual pada dataset Iris, diperoleh beberapa kesimpulan esensial:
+
+1. **Karakteristik Fitur Melalui Ringkasan Statistik**: Melalui fungsi `.describe()`, kita dapat melakukan asesmen awal secara efisien terhadap rentang, variabilitas, dan kecenderungan pemusatan tiap parameter numerik tanaman Iris.
+2. **Korelasi Kuat Antar Dimensi Mahkota**: Analisis bivariat membuktikan adanya hubungan linear positif yang sangat kuat antara `petal_length` (panjang mahkota) dan `petal_width` (lebar mahkota). Pola ini terbukti konsisten baik secara visual melalui *Scatter Plot* maupun secara kuantitatif melalui nilai matriks korelasi Pearson.
+3. **Diferensiasi Spesies Berdasarkan Morfologi**: Visualisasi berlapis menggunakan kombinasi *Boxplot* dan *Violin Plot* memvalidasi bahwa setiap spesies tanaman Iris (Setosa, Versicolor, Virginica) memiliki karakteristik distribusi ukuran mahkota (*petal*) yang sangat khas dan terpisah, menjadikannya fitur pembeda yang ideal untuk pemodelan klasifikasi machine learning ke depannya.
