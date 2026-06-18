@@ -1,0 +1,49 @@
+# Pertemuan3-Elsa-Mayori-Malik-240401020098-IF403
+Pertemuan3 [Elsa Mayori Malik] | 240401020098 | IF403
+
+# Tugas Praktikum Pengantar Data Science
+### Repository Portofolio Data Science
+
+* **Nama Lengkap:** Elsa Mayori Malik
+* **NIM:** 240401020098
+* **Kelas:** IF403
+* **Pertemuan:** 3 (Data Cleaning: Missing Values, Outliers, & Ekstraksi Data)
+
+---
+
+## Ringkasan Teori & Konsep Akademis
+
+### 1. Pentingnya Kualitas Data (Data Quality)
+Dalam dunia Data Science, berlaku hukum **"Garbage In, Garbage Out"** (jika data yang masuk sampah, maka model/informasi yang dihasilkan juga sampah). Fase pembersihan data (*Data Cleaning*) memakan waktu sekitar 60-80% dari total siklus hidup proyek data karena data mentah di dunia nyata selalu kotor.
+
+### 2. Taksonomi & Mekanisme Missing Values
+Berdasarkan teori statistik Rubin (1976), hilangnya data diklasifikasikan menjadi tiga mekanisme utama:
+1. **MCAR (Missing Completely at Random)**: Data hilang sepenuhnya secara acak tanpa pola tersembunyi. Kehilangan tidak berhubungan dengan nilai kolom itu sendiri maupun kolom lainnya.
+2. **MAR (Missing at Random)**: Pola kehilangan data berhubungan dengan variabel atau kolom lain yang terobservasi, tetapi tidak berhubungan dengan variabel itu sendiri.
+3. **MNAR (Missing Not at Random)**: Data hilang karena alasan yang sistematis dan berkaitan langsung dengan nilai yang hilang tersebut (misal: orang berpenghasilan sangat tinggi cenderung menolak mengisi survei gaji).
+
+### 3. Strategi Penanganan Data Hilang
+* **Dropping (Penghapusan)**: Menghapus baris (`.dropna()`) jika persentase missing value sangat kecil (<5%) atau menghapus kolom jika kerusakan data >50%.
+* **Imputasi Statistik**: Mengisi nilai kosong dengan ringkasan statistik. Nilai rata-rata (*Mean*) digunakan untuk data numerik berdistribusi normal, sedangkan *Median* digunakan jika data memiliki pencilan (*outliers*) kuat.
+
+### 4. Teori Deteksi & Metode Outliers (Interquartile Range - IQR)
+Outliers atau pencilan adalah titik data yang menyimpang secara ekstrem dari sebaran data lainnya. Untuk mendeteksinya secara objektif tanpa asumsi distribusi normal, kita menggunakan **Metode IQR**:
+* **Kuartil 1 (Q1)**: Batas nilai data pada posisi 25%.
+* **Kuartil 3 (Q3)**: Batas nilai data pada posisi 75%.
+* **IQR**: Selisih antara $Q3 - Q1$.
+* **Batas Atas**: $Q3 + (1.5 \times IQR)$
+* **Batas Bawah**: $Q1 - (1.5 \times IQR)$
+Setiap titik data yang berada di luar batas atas maupun batas bawah diidentifikasi sah sebagai outlier dan harus ditangani (dihapus atau di-imputasi).
+
+### 5. Pengantar Ekstraksi Data (Web API & JSON)
+Data tidak hanya bersumber dari file CSV lokal. Seringkali Data Scientist harus melakukan ekstraksi data dari pihak ketiga melalui protokol internet menggunakan **Web API** (Application Programming Interface). Data yang dikirim dari API umumnya berformat **JSON** (JavaScript Object Notation), sebuah format teks ringan berbasis *key-value pair* yang sangat mirip dengan struktur *Dictionary* pada Python.
+
+---
+
+## Kesimpulan Praktikum Pertemuan 3
+
+Berdasarkan hasil implementasi kode program pembersihan data dan ekstraksi data, diperoleh beberapa konklusi penting:
+
+1. **Akurasi Hasil Analisis Tergantung Imputasi**: Pemilihan metode pengisian data kosong berdampak langsung pada bias informasi. Menggunakan nilai *Median* untuk menambal data terbukti jauh lebih aman dibanding *Mean* ketika dataset terkontaminasi oleh nilai pencilan (*outliers*).
+2. **Deteksi IQR Meminimalkan Subjektivitas**: Penggunaan visualisasi *Box Plot* yang diperkuat dengan perhitungan rumus matematis IQR memberikan parameter yang pasti dan objektif dalam memisahkan mana data yang wajar dan mana data yang merupakan anomali/error.
+3. **Fleksibilitas Data Scientist di Era Cloud**: Kemampuan melakukan ekstraksi data via API menggunakan library `requests` dan mengubah format semi-terstruktur JSON menjadi `pd.DataFrame` yang siap pakai, merupakan pondasi krusial bagi seorang Data Scientist untuk mengolah data berbasis internet atau *real-time streaming data*.
