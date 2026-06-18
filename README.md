@@ -206,3 +206,12 @@ plt.show()
 print("\n" + "="*70)
 print(" PIPELINE INTEGRASI SELESAI - KODE PROGRAM BERJALAN SEMPURNA 100% ")
 print("="*70)
+
+
+* **[Pertemuan 1](./Pertemuan1-%20\(Elsa\)%20-%20240401020098-IF403):** Pengenalan Lingkungan Kerja, Manajemen Kontrol Versi dengan Git & GitHub, dan Pembuatan Struktur Portofolio.
+* **[Pertemuan 2](./Pertemuan2-%20\(Elsa\)-%20240401020098-IF403):** Pembersihan Data – Teknik Deteksi, Analisis, dan Penanganan Data Hilang (*Handling Missing Values*).
+* **[Pertemuan 3](./Pertemuan3-%20\(Elsa\)-240401020098-IF403):** Pembersihan Data – Identifikasi dan Eliminasi Data Anomali/Pencilan Menggunakan Metode *Interquartile Range* (IQR).
+* **[Pertemuan 4](./Pertemuan4-%20\(Elsa\)%20-%20240401020098-IF403):** Analisis Eksploratif Data (EDA) – Pengukuran Ukuran Pemusatan (*Central Tendency*) dan Bentuk Sebaran Distribusi Frekuensi Data.
+* **[Pertemuan 5](./Pertemuan5%20-%20\(Elsa\)%20-%20240401020098-IF403):** *Data Storytelling* – Teknik Visualisasi Data Komparatif dan Korelatif Menggunakan Pustaka Seaborn & Matplotlib.
+* **[Pertemuan 6](./Pertemuan6%20-%20\(Elsa\)%20-%20240401020098%20-%20IF403):** Rekayasa Fitur – Transformasi Variabel Kategori (*One-Hot Encoding*), Pembagian Dataset (*Train-Test Split*), dan Penyelarasan Skala (*StandardScaler*).
+* **[Pertemuan 7](./Pertemuan7%20-%20\(Elsa\)%20-%20240401020098):** Pengantar Pemodelan – Implementasi Algoritma Regresi Linear, Evaluasi Kuantitatif (MAE, RMSE, $R^2$), dan Uji Kelayakan Asumsi Model Menggunakan *Residual Plot*.
