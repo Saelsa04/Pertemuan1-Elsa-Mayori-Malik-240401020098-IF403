@@ -1,0 +1,42 @@
+# Pertemuan6-Elsa-Mayori-Malik-240401020098-IF403
+Pertemuan6 [Elsa Mayori Malik] | 240401020098 | IF403
+
+# Tugas Praktikum Pengantar Data Science
+### Repository Portofolio Data Science
+
+* **Nama Lengkap:** Elsa Mayori Malik
+* **NIM:** 240401020098
+* **Kelas:** IF403
+* **Pertemuan:** 6 (Persiapan Data / Data Preprocessing)
+
+---
+
+## Ringkasan Teori & Konsep Akademis
+
+### 1. Esensi Persiapan Data (Data Preprocessing)
+Persiapan data adalah langkah kritis terakhir dalam rekayasa fitur sebelum data dimasukkan ke dalam algoritma Machine Learning. Algoritmik matematika pada komputer tidak dapat memproses teks mentah dan sangat sensitif terhadap perbedaan skala numerik. Oleh karena itu, standardisasi struktur data mutlak diperlukan.
+
+### 2. Transformasi Variabel Kategorikal (Encoding)
+Model Machine Learning berbasis matriks membutuhkan input numerik penuh. Variabel kategori/teks harus diubah dengan teknik:
+* **One-Hot Encoding**: Mengubah setiap nilai unik di dalam kolom kategorikal menjadi kolom biner baru (0 atau 1). Teknik ini ideal untuk data nominal tanpa tingkatan (seperti kolom `sex` atau `embarked`), guna menghindari asumsi salah oleh model bahwa suatu kategori bernilai lebih tinggi dari yang lain.
+
+### 3. Pembagian Dataset (Train-Test Split)
+Untuk menguji kemampuan generalisasi model secara objektif dan menghindari *overfitting* (kondisi di mana model menghafal data latihan tetapi gagal memprediksi data baru), dataset dibagi menjadi dua bagian:
+* **Train Set (Data Latih)**: Digunakan penuh untuk melatih dan menyelaraskan bobot algoritma model (biasanya berbobot 70-80%).
+* **Test Set (Data Uji)**: Bertindak sebagai data asing yang murni digunakan untuk mengevaluasi performa prediksi model (biasanya berbobot 20-30%).
+
+### 4. Penskalaan Fitur (Feature Scaling)
+Banyak algoritma Machine Learning (seperti KNN, SVM, dan Linear Regression) mengukur jarak Euclidean antar titik data. Jika satu kolom bernilai ribuan (misal: `fare`) dan kolom lain bernilai satuan (misal: `age`), maka fitur bernilai besar akan mendominasi model secara tidak adil.
+* **StandardScaler (Standardisasi)**: Mentransformasikan fitur sehingga memiliki rata-rata (*mean*) = 0 dan standar deviasi = 1 dengan menggunakan rumus:
+  $$z = \frac{x - \mu}{\sigma}$$
+* **Golden Rule Validation**: Proses penskalaan (*fit*) hanya boleh dipelajari dari *Train Set*, kemudian parameter tersebut diterapkan (*transform*) secara konsisten pada *Test Set* agar tidak terjadi kebocoran informasi (*data leakage*).
+
+---
+
+## Kesimpulan Praktikum Pertemuan 6
+
+Berdasarkan hasil eksperimen pipa persiapan data (*preprocessing pipeline*) menggunakan dataset Titanic, diperoleh beberapa kesimpulan penting:
+
+1. **Keberhasilan Standardisasi Input**: Penerapan *One-Hot Encoding* melalui `pd.get_dummies()` berhasil mengeleminasi fitur teks mentah menjadi representasi biner, sehingga dataset murni berbasis numerik dan siap diproses oleh library Scikit-Learn.
+2. **Keseimbangan Skala Fitur**: Penggunaan *StandardScaler* terbukti mampu menyelaraskan rentang nilai kolom `age` dan `fare` menjadi skala standar berpusat di angka 0. Hal ini memastikan setiap fitur numerik memiliki kontribusi yang setara dalam perhitungan matematis model.
+3. **Pencegahan Data Leakage**: Dengan memisahkan proses transformasi data pasca *Train-Test Split*, kemurnian pengujian data uji tetap terjaga. Pembagian matriks akhir (`X_train`, `X_test`, `y_train`, `y_test`) telah memenuhi standar industri untuk melangkah ke tahap *Modeling* pada siklus CRISP-DM berikutnya.
