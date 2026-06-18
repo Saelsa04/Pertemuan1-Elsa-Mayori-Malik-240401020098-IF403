@@ -1,0 +1,50 @@
+# Pertemuan1-Elsa-Mayori-Malik-240401020098-IF403
+Pertemuan1[Elsa Mayori Malik] 240401020098 IF403
+
+# Tugas Praktikum Pengantar Data Science
+### Repository Portofolio Data Science
+
+* **Nama Lengkap:** [Elsa Mayori Malik]
+* **NIM:** [240401020098]
+* **Kelas:** [IF403]
+* **Pertemuan:** 1 (Pengenalan Data Science & Lingkungan Kerja)
+
+# Pertemuan 1: Mengenal Dunia Data Science
+
+Repositori ini berisi rangkuman materi kuliah Pengantar Data Science Pertemuan 1 beserta latihan kode Python dasar.
+
+## 1. Definisi Data Science
+Data Science adalah bidang multidisiplin yang menggunakan metode ilmiah, proses algoritmik, dan sistem komputasi untuk mengekstrak pengetahuan dan wawasan dari data terstruktur maupun tidak terstruktur (Dhar, 2013; Donoho, 2017).
+
+## 2. Tiga Pilar Utama Data Science
+Data Science berdiri di atas tiga pilar utama yang saling melengkapi:
+1. **Statistika & Matematika**: Berfungsi untuk memahami, menganalisis, dan menginterpretasi data secara kuantitatif (probabilitas, regresi, aljabar linear).
+2. **Ilmu Komputer**: Kemampuan teknis untuk mengelola, memproses, dan mengotomasi analisis data skala besar (pemrograman, machine learning, basis data).
+3. **Domain Knowledge**: Pemahaman mendalam tentang konteks, masalah, dan kebutuhan spesifik dari suatu bidang industri atau bisnis (bisnis, kesehatan, dll).
+
+## 3. Fenomena Big Data (4V)
+Kebutuhan akan Data Science didorong oleh ledakan data yang memenuhi karakteristik 4V:
+* **Volume**: Ukuran data yang dihasilkan tumbuh secara eksponensial.
+* **Velocity**: Kecepatan generasi dan pemrosesan data yang sangat cepat (real-time).
+* **Variety**: Keberagaman format data (teks, gambar, video, log, dll).
+* **Veracity**: Tingkat kebenaran atau kualitas data yang menjadi tantangan dalam pengambilan keputusan.
+
+## 4. Ekosistem Profesi Data Science
+* **Data Analyst**: Berfokus pada analisis tren, pembuatan dashboard/laporan bisnis, dan menjawab pertanyaan konkret.
+* **Data Scientist**: Berfokus pada pembangunan model Machine Learning & AI, eksperimen, serta menjawab masalah kompleks.
+* **Data Engineer**: Berfokus membangun infrastruktur data, pipeline ETL/ELT, serta data warehouse (fondasi bagi tim data).
+* **ML Engineer**: Berfokus menerapkan (*deployment*) model machine learning ke lingkungan produksi agar bisa skala besar.
+
+## 5. Siklus Hidup Proyek Data: Kerangka CRISP-DM
+Metodologi industri yang bersifat iteratif ini terdiri dari 6 fase:
+1. **Business Understanding**: Memahami tujuan bisnis dan mendefinisikan kriteria keberhasilan.
+2. **Data Understanding**: Mengumpulkan data awal dan memeriksa kualitasnya.
+3. **Data Preparation**: Membersihkan, mentransformasikan, dan menyiapkan dataset (fase paling memakan waktu, sekitar 60-80%).
+4. **Modeling**: Memilih algoritma dan melatih model machine learning.
+5. **Evaluation**: Menilai performa model terhadap tujuan bisnis awal.
+6. **Deployment**: Mengintegrasikan model ke lingkungan produksi dan memantau performanya.
+
+## 6. Ekosistem Tools Modern
+* **Python**: Bahasa pemrograman utama yang didukung ekosistem library kuat (Pandas, NumPy, Scikit-learn).
+* **Google Colab & Jupyter Notebook**: Lingkungan kerja interaktif berbasis cloud dan lokal untuk menulis kode dan teks.
+* **GitHub**: Platform kolaborasi berbasis Git untuk pelacakan kode dan portofolio profesional.
